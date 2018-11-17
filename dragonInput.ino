@@ -1,7 +1,7 @@
 const int buttonIncr = 4;
 const int buttonDecr = 5;
-const int good = 6;
-const int bad = 7;
+const int good = 7;
+const int bad = 6;
 
 int pressedIncr;
 int pressedDecr;
