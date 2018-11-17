@@ -23,6 +23,7 @@ void loop() {
 	pressedDecr = digitalRead(buttonDecr);
 	
 	analogWrite(good, HIGH);
+	analogWrite(bad, HIGH);
 	
 	// compare the buttonState to its previous state
 	if (pressedIncr != lastIncr) {
