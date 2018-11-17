@@ -31,7 +31,7 @@ void loop() {
 			confirm = Serial.readString()[0];
 			if (confirm == 'g') {
 				analogWrite(good, HIGH);
-			} else {
+			} else if (confirm == 'b') {
 				analogWrite(bad, HIGH);
 			}
 		}
@@ -52,7 +52,7 @@ void loop() {
 			confirm = Serial.readString()[0];
 			if (confirm == 'g') {
 				analogWrite(good, HIGH);
-			} else {
+			} else if (confirm == 'b'){
 				analogWrite(bad, HIGH);
 			}
 		}
