@@ -1,7 +1,7 @@
 const int buttonIncr = 4;
 const int buttonDecr = 5;
-const int good = 7;
-const int bad = 6;
+const int good = 6;
+const int bad = A0;
 
 int pressedIncr;
 int pressedDecr;
@@ -21,9 +21,6 @@ void setup() {
 void loop() {
     pressedIncr = digitalRead(buttonIncr);
 	pressedDecr = digitalRead(buttonDecr);
-	
-	analogWrite(good, HIGH);
-	analogWrite(bad, HIGH);
 	
 	// compare the buttonState to its previous state
 	if (pressedIncr != lastIncr) {
