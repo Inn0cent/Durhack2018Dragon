@@ -55,10 +55,11 @@ void loop() {
 	lastDecr = pressedDecr;	
 }
 
-void confirmation(confirm) {
-	//if (confirm = 'g') {
-		//analogWrite(good, HIGH);
-	//} else {
-		//analogWrite(bad, HIGH);
-	//}
+int confirmation(confirm) {
+	if (confirm = 'g') {
+		analogWrite(good, HIGH);
+	} else {
+		analogWrite(bad, HIGH);
+	}
+	return 1;
 }
