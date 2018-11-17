@@ -9,16 +9,6 @@ int lastIncr;
 int lastDecr;
 char confirm;
 
-
-int confirmation(confirm) {
-	if (confirm = 'g') {
-		analogWrite(good, HIGH);
-	} else {
-		analogWrite(bad, HIGH);
-	}
-	return 1;
-}
-
 void setup() {
     pinMode(buttonIncr, INPUT);
     pinMode(buttonDecr, INPUT);
