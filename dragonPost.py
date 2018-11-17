@@ -4,7 +4,7 @@
 # # Send data to the server
 # Probably using a get request to tell the server to increment 
 
-# In[1]:
+# In[5]:
 
 
 import serial, sys
@@ -12,13 +12,13 @@ import serial, sys
 ard = serial.Serial('/dev/tty96B0', 115200)
 
 
-# In[5]:
+# In[1]:
 
 
 import requests
 
 
-# In[32]:
+# In[2]:
 
 
 def checkPost(r):
@@ -26,7 +26,7 @@ def checkPost(r):
         print("Error:", r.status_code, r.reason)
 
 
-# In[31]:
+# In[3]:
 
 
 def increment(clubID):
@@ -34,7 +34,7 @@ def increment(clubID):
     checkPost(r)
 
 
-# In[30]:
+# In[4]:
 
 
 def decrement(clubID):
@@ -42,7 +42,7 @@ def decrement(clubID):
     checkPost(r)
 
 
-# In[4]:
+# In[8]:
 
 
 if __name__ == '__main__':
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     print("Welcome to the Club Cracker! To quit, press CTRL + C")
     try:
         while True:
-            ardOut = ard.readline()
+            ardOut = str(ard.readline())
             if ardOut.find("increment") != -1:
                 increment(clubID)
             if ardOut.find("decrement") != -1:
