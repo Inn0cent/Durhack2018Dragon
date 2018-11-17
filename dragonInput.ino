@@ -38,7 +38,12 @@ void loop() {
 		if (pressedIncr == HIGH) {
 			// if the current state is HIGH then the button went from off to on:
 			Serial.println("increment");
-			confirmation(Serial.readString()[0]);
+			confirm = Serial.readString()[0];
+			if (confirm = 'g') {
+				analogWrite(good, HIGH);
+			} else {
+				analogWrite(bad, HIGH);
+			}
 		}
 		// Delay a little bit to avoid bouncing
 		delay(500);
@@ -54,7 +59,12 @@ void loop() {
 		if (pressedDecr == HIGH) {
 			// if the current state is HIGH then the button went from off to on:
 			Serial.println("decrement");
-			confirmation(Serial.readString()[0]);
+			confirmSerial.readString()[0];
+			if (confirm = 'g') {
+				analogWrite(good, HIGH);
+			} else {
+				analogWrite(bad, HIGH);
+			}
 		}
 		// Delay a little bit to avoid bouncing
 		delay(500);
