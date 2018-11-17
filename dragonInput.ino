@@ -9,14 +9,6 @@ int lastIncr;
 int lastDecr;
 char confirm;
 
-void confirmation(confirm){
-	if (confirm = 'g') {
-		analogWrite(good, HIGH);
-	} else {
-		analogWrite(bad, HIGH);
-	}
-}
-
 void setup() {
     pinMode(buttonIncr, INPUT);
     pinMode(buttonDecr, INPUT);
@@ -61,4 +53,12 @@ void loop() {
 	}
 	// save the current state as the last state, for next time through the loop
 	lastDecr = pressedDecr;	
+}
+
+void confirmation(confirm) {
+	if (confirm = 'g') {
+		analogWrite(good, HIGH);
+	} else {
+		analogWrite(bad, HIGH);
+	}
 }
