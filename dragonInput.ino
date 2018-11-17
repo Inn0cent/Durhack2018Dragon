@@ -29,7 +29,7 @@ void loop() {
 			// if the current state is HIGH then the button went from off to on:
 			Serial.println("increment");
 			confirm = Serial.readString()[0];
-			if (confirm = 'g') {
+			if (confirm == 'g') {
 				analogWrite(good, HIGH);
 			} else {
 				analogWrite(bad, HIGH);
@@ -50,7 +50,7 @@ void loop() {
 			// if the current state is HIGH then the button went from off to on:
 			Serial.println("decrement");
 			confirmSerial.readString()[0];
-			if (confirm = 'g') {
+			if (confirm == 'g') {
 				analogWrite(good, HIGH);
 			} else {
 				analogWrite(bad, HIGH);
