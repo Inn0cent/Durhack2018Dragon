@@ -56,9 +56,9 @@ void loop() {
 }
 
 void confirmation(confirm) {
-	if (confirm = 'g') {
-		analogWrite(good, HIGH);
-	} else {
-		analogWrite(bad, HIGH);
-	}
+	//if (confirm = 'g') {
+		//analogWrite(good, HIGH);
+	//} else {
+		//analogWrite(bad, HIGH);
+	//}
 }
