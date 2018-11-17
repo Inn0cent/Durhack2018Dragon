@@ -46,8 +46,13 @@ def decrement(clubID):
 
 
 if __name__ == '__main__':
-    print("Welcome to the Club Cracker! To quit, press CTRL + C")
+    if len(sys.argv) != 2:
+        print("Usage: python3 dragonPost.py clubID=<clubID>")
+        exit()
     clubID = sys.argv[1]
+    if clubID == '0':
+        print("Usage: make makefile clubID=<clubID>")
+    print("Welcome to the Club Cracker! To quit, press CTRL + C")
     try:
         while True:
             ardOut = ard.readline()

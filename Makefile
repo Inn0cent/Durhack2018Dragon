@@ -1,3 +1,4 @@
 include /usr/share/arduino/Arduino.mk
+clubID?=0
 run: upload
-    python tweeting_doorbell.py
+    python3 dragonPost.py clubID
