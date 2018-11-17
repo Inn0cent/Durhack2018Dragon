@@ -36,7 +36,7 @@ void loop() {
 			}
 		}
 		// Delay a little bit to avoid bouncing
-		delay(500);
+		delay(250);
 		analogWrite(good, LOW);
 		analogWrite(bad, LOW);
 	}
@@ -57,7 +57,7 @@ void loop() {
 			}
 		}
 		// Delay a little bit to avoid bouncing
-		delay(500);
+		delay(250);
 		analogWrite(good, LOW);
 		analogWrite(bad, LOW);
 	}
