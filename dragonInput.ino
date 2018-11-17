@@ -49,7 +49,7 @@ void loop() {
 		if (pressedDecr == HIGH) {
 			// if the current state is HIGH then the button went from off to on:
 			Serial.println("decrement");
-			confirmSerial.readString()[0];
+			confirm = Serial.readString()[0];
 			if (confirm == 'g') {
 				analogWrite(good, HIGH);
 			} else {
