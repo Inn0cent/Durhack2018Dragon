@@ -18,28 +18,33 @@ ard = serial.Serial('/dev/tty96B0', 115200)
 import requests
 
 
-# In[2]:
+# In[1]:
 
 
-def checkPost(r):
-    if r.status_code != 200:
+def checkPost(r, ard):
+    if r.status_code == 200:
+        print("Good POST")
+        ard.write('g')
+    else:
         print("Error:", r.status_code, r.reason)
+        ard.write('b')
+    
 
 
 # In[3]:
 
 
-def increment(clubID):
+def increment(clubID, ard):
     r = requests.post("http://10.245.1.242:8000/entry/" + clubID, data={'number': 12524, 'type': 'issue', 'action': 'show'})
-    checkPost(r)
+    checkPost(r, ard)
 
 
 # In[4]:
 
 
-def decrement(clubID):
+def decrement(clubID, ard):
     r = requests.post("http://10.245.1.242:8000/leave/" + clubID, data={'number': 12524, 'type': 'issue', 'action': 'show'})
-    checkPost(r)
+    checkPost(r, ard)
 
 
 # In[8]:
@@ -57,9 +62,9 @@ if __name__ == '__main__':
         while True:
             ardOut = str(ard.readline())
             if ardOut.find("increment") != -1:
-                increment(clubID)
+                increment(clubID, ard)
             if ardOut.find("decrement") != -1:
-                decrement(clubID)
+                decrement(clubID, ard)
     except KeyboardInterrupt:
         print("CTRL-C!! Exiting...")
 
