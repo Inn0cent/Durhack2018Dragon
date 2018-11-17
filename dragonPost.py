@@ -24,10 +24,10 @@ import requests
 def checkPost(r, ard):
     if r.status_code == 200:
         print("Good POST")
-        ard.write('g')
+        ard.write(b'g')
     else:
         print("Error:", r.status_code, r.reason)
-        ard.write('b')
+        ard.write(b'b')
     
 
 
