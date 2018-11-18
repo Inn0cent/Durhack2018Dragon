@@ -52,7 +52,7 @@ def decrement(clubID, ard):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print("Usage: python3 dragonPost.py clubID=<clubID>")
+        print("Usage: python3 dragonPost.py <clubID>")
         exit()
     clubID = sys.argv[1]
     if clubID == '0':
