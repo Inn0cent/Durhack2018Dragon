@@ -48,9 +48,6 @@ void loop() {
 		// if the state has changed, increment the counter
 		if (pressedDecr == HIGH) {
 			// if the current state is HIGH then the button went from off to on:
-			analogWrite(bad, HIGH);
-			delay(250);
-			analogWrite(bad, LOW);
 			Serial.println("decrement");
 			confirm = Serial.readString()[0];
 			if (confirm == 'g') {
